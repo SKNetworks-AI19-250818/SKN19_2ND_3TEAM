@@ -57,12 +57,25 @@ st.markdown("""
     
     /* 헤더 스타일 */
     .netflix-header {
-        background: linear-gradient(90deg, #221F1F 0%, #920C12 100%);
+        background: linear-gradient(135deg, #1a1a1a 0%, #E50914 50%, #B81D24 100%);
         padding: 2rem;
-        border-radius: 10px;
+        border-radius: 20px;
         margin-bottom: 2rem;
         box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
         color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .netflix-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+        pointer-events: none;
     }
     
     .netflix-title {
@@ -90,19 +103,19 @@ st.markdown("""
         color: white;
         text-align: center;
         margin: 1rem 0;
-        box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
-        border: 3px solid #221F1F;
+        box-shadow: 0 8px 25px rgba(229, 9, 20, 0.5);
+        border: none;
     }
     
     .metric-title {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
         color: #f0f0f0;
     }
     
     .metric-value {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         font-weight: bold;
         color: white;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -112,27 +125,33 @@ st.markdown("""
     .stButton > button {
         background: linear-gradient(135deg, #E50914 0%, #B81D24 100%);
         color: white;
-        border: 3px solid #221F1F;
-        border-radius: 10px;
-        padding: 0.75rem 2rem;
-        font-size: 1.1rem;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2.5rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+        box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
         transition: all 0.3s ease;
     }
     
     .stButton > button:hover {
         background: linear-gradient(135deg, #B81D24 0%, #E50914 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(229, 9, 20, 0.6);
     }
     
     /* 파일 업로더 스타일 */
     .stFileUploader {
-        border: 3px dashed #E50914;
-        border-radius: 10px;
+        border: 2px dashed rgba(229, 9, 20, 0.4);
+        border-radius: 15px;
         padding: 2rem;
         background-color: #fafafa;
+        transition: all 0.3s ease;
+    }
+    
+    .stFileUploader:hover {
+        border-color: rgba(229, 9, 20, 0.8);
+        background-color: rgba(229, 9, 20, 0.05);
     }
     
     /* 텍스트 스타일 */
@@ -142,15 +161,97 @@ st.markdown("""
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     
+    .stMarkdown h1 {
+        font-size: 8rem !important;
+    }
+    
+    .stMarkdown h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .stMarkdown h3 {
+        font-size: 2rem !important;
+    }
+    
     .stMarkdown p {
-        color: white;
+        color: #221F1F;
         font-weight: 500;
+        font-size: 1.3rem !important;
+        line-height: 1.6;
+        margin-top: 0.3rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* 설명 텍스트 스타일 (흐린 색상) */
+    .stMarkdown p strong {
+        color: #888888 !important;
+        font-weight: 400 !important;
+        opacity: 0.8;
+    }
+    
+    /* 섹션 간격 조정 */
+    .main .block-container {
+        padding-top: 1rem !important;
+    }
+    
+    /* 차트 컨테이너 상단 여백 조정 */
+    .js-plotly-plot {
+        margin-top: 0.5rem !important;
+    }
+    
+    /* 전체 텍스트 기본 크기 */
+    .main .stMarkdown {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Selectbox 및 기타 입력 요소 */
+    .stSelectbox label {
+        font-size: 1.3rem !important;
+        font-weight: bold !important;
+    }
+    
+    .stSelectbox > div > div {
+        font-size: 1.2rem !important;
+    }
+    
+    /* 파일 업로더 텍스트 */
+    .stFileUploader label {
+        font-size: 1.3rem !important;
+        font-weight: bold !important;
+    }
+    
+    /* Expander 텍스트 */
+    .streamlit-expanderHeader {
+        font-size: 1.3rem !important;
+        font-weight: bold !important;
+    }
+    
+    /* 데이터프레임 */
+    .stDataFrame {
+        font-size: 1.1rem !important;
+    }
+    
+    /* 정보, 경고, 성공 메시지 */
+    .stAlert {
+        font-size: 1.2rem !important;
+    }
+    
+    /* 기본 텍스트 색상 */
+    .main .stMarkdown {
+        color: #221F1F;
+    }
+    
+    /* st.write 텍스트 색상 */
+    .main [data-testid="stMarkdownContainer"] {
+        color: #221F1F;
     }
     
     /* 데이터프레임 스타일 */
     .stDataFrame {
-        border: 2px solid #E50914;
-        border-radius: 10px;
+        border: 1px solid rgba(229, 9, 20, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
     
     /* 차트 컨테이너 스타일 */
@@ -161,6 +262,53 @@ st.markdown("""
         padding: 1rem;
         margin: 1rem 0;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Plotly 차트 배경 스타일 */
+    .js-plotly-plot {
+        background: transparent;
+        border-radius: 12px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        overflow: visible;
+    }
+    
+    /* Streamlit 차트 컨테이너 배경 */
+    .stPlotlyChart {
+        background: linear-gradient(135deg, #fcfcfc 0%, #f8f8f8 100%);
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(229, 9, 20, 0.05);
+        border: 1px solid rgba(229, 9, 20, 0.08);
+        overflow: visible !important;
+        position: relative;
+    }
+    
+    .stPlotlyChart::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.02) 0%, transparent 40%),
+            radial-gradient(circle at 85% 85%, rgba(229, 9, 20, 0.015) 0%, transparent 40%);
+        border-radius: 15px;
+        pointer-events: none;
+        z-index: 0;
+    }
+    
+    .stPlotlyChart > div {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Streamlit 컨테이너 내부 차트 여백 조정 */
+    .element-container:has(.js-plotly-plot) {
+        overflow: visible !important;
     }
     
     /* 사이드바 숨기기 */
@@ -194,8 +342,8 @@ st.markdown("""
         padding: 3rem;
         border-radius: 20px;
         text-align: center;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-        border: 3px solid #E50914;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9);
+        border: none;
         min-width: 400px;
         animation: modalFadeIn 0.5s ease-out;
     }
@@ -214,7 +362,7 @@ st.markdown("""
     /* 로딩 텍스트 */
     .loading-text {
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 2rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -240,7 +388,7 @@ st.markdown("""
     
     /* Netflix 로고 애니메이션 */
     .loading-logo {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
         animation: pulse 2s infinite;
     }
@@ -322,43 +470,75 @@ def create_sample_insights_charts():
     features = ['고객만족도', '일일시청시간', '참여도', '구독기간', '지원문의건수', '월소득']
     importance = [0.25, 0.22, 0.18, 0.15, 0.12, 0.08]
     
+    # 넷플릭스 다채로운 팔레트 (영화/드라마 장르별 색상)
+    netflix_colors = ['#E50914', '#FF6B35', '#F7931E', '#FFD23F', '#06FFA5', '#4ECDC4', '#45B7D1', '#96CEB4']
+    
     fig1 = go.Figure(data=[
         go.Bar(x=importance, y=features, orientation='h',
-               marker=dict(color=['#E50914', '#B81D24', '#8B1538', '#6B0F2A', '#4A0A1C', '#2A050E']))
+               marker=dict(
+                   color=netflix_colors[:len(features)],
+                   line=dict(width=0)  # 보더 제거
+               ))
     ])
     
     fig1.update_layout(
         title="<b>주요 이탈 예측 요인</b>",
-        title_font_size=20,
+        title_font_size=28,
         title_font_color="#171717",
         xaxis_title="<b>중요도</b>",
         yaxis_title="<b>요인</b>",
-        font=dict(color='#171717', size=20, family="Arial Black"),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
+        font=dict(color='#171717', size=24, family="Arial Black"),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
         height=400,
+        
         margin=dict(l=20, r=20, t=60, b=20)
+    )
+    
+    # 축 제목과 틱 폰트 크기 개별 설정
+    fig1.update_xaxes(
+        title_font_size=20,
+        title_font_color='#171717',
+        tickfont_size=16,
+        tickfont_color='#171717'
+    )
+    fig1.update_yaxes(
+        title_font_size=20,
+        title_font_color='#171717',
+        tickfont_size=16,
+        tickfont_color='#171717'
     )
     
     # 차트 2: 구독 플랜별 이탈률 (샘플 데이터)
     plans = ['Basic', 'Standard', 'Premium']
     churn_rates = [31.8, 35.4, 32.8]
-    colors = ['#E50914', '#B81D24', '#8B1538']
+    # 넷플릭스 테마 다채로운 색상 (구독플랜별)
+    colors = ['#FF6B35', '#4ECDC4', '#FFD23F']  # 오렌지, 청록, 황금색
     
     fig2 = go.Figure(data=[
         go.Pie(labels=plans, values=churn_rates, hole=0.4,
-               marker=dict(colors=colors, line=dict(color='#221F1F', width=3)))
+               marker=dict(colors=colors, line=dict(color='white', width=1)))
     ])
     
     fig2.update_layout(
         title="<b>구독 플랜별 이탈률 (%)</b>",
-        title_font_size=20,
+        title_font_size=28,
         title_font_color='#221F1F',
-        font=dict(color='#221F1F', size=14, family="Arial Black"),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
+        font=dict(color='#221F1F', size=20, family="Arial Black"),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
         height=400,
-        margin=dict(l=20, r=20, t=60, b=20)
+        
+        margin=dict(l=20, r=20, t=60, b=20),
+        legend=dict(
+            font=dict(size=18, color='#221F1F')
+        )
+    )
+    
+    # 파이 차트 라벨 폰트 크기 조정
+    fig2.update_traces(
+        textfont_size=16,
+        textfont_color='#221F1F'
     )
     
     return fig1, fig2
@@ -488,22 +668,29 @@ def create_result_charts(df, churn_proba, feature_importance=None):
         go.Histogram(
             x=churn_proba_scaled,  # 스케일 조정된 데이터 사용
             xbins=custom_xbins,    # 0.1 단위에 해당하는 10 단위 구간 설정
-            marker=dict(color='#E50914', line=dict(color='#221F1F', width=2))
+            marker=dict(
+                color='#4ECDC4',  # 청록색으로 변경
+                line=dict(width=0),  # 보더 제거
+                # 그라데이션 효과
+                opacity=0.9
+            )
         )
     ])
 
     # 레이아웃 업데이트
     fig1.update_layout(
+        bargap=0.1,
         title="<b>고객별 이탈 확률 분포</b>",
-        title_font_size=20,
+        title_font_size=28,
         title_font_color='#221F1F',
         # X축 제목은 이제 '이탈 확률 (%)'로 변경하는 것이 좋습니다.
         xaxis_title="<b>이탈 확률 (%)</b>", 
         yaxis_title="<b>고객 수</b>",
-        font=dict(color='#221F1F', size=14, family="Arial Black"),
-        plot_bgcolor='white',
-        paper_bgcolor='white',
-        height=400
+        font=dict(color='#221F1F', size=18, family="Arial Black"),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        height=400,
+        
     )
 
     # --- 3. X축 수치 포맷을 퍼센트로 지정 ---
@@ -512,7 +699,17 @@ def create_result_charts(df, churn_proba, feature_importance=None):
     # ticksuffix='%'를 사용하면 X축 틱 레이블 뒤에 '%'가 붙습니다.
     fig1.update_xaxes(
         tickformat=".0f",     # 소수점 없이 정수로 표시
-        ticksuffix="%"       # 숫자 뒤에 % 추가
+        ticksuffix="%",       # 숫자 뒤에 % 추가
+        title_font_size=20,
+        title_font_color='#221F1F',
+        tickfont_size=16,
+        tickfont_color='#221F1F'
+    )
+    fig1.update_yaxes(
+        title_font_size=20,
+        title_font_color='#221F1F',
+        tickfont_size=16,
+        tickfont_color='#221F1F'
     )
 
     charts['분포'] = fig1
@@ -520,69 +717,133 @@ def create_result_charts(df, churn_proba, feature_importance=None):
     # 2. 이탈 요인 중요도 (특성 중요도가 있는 경우)
     if feature_importance is not None:
         top_features = feature_importance.head(8).sort_values('importance', ascending=True)
+        
+        # 넷플릭스 테마 다채로운 색상 팔레트
+        feature_colors = ['#E50914', '#FF6B35', '#F7931E', '#FFD23F', '#06FFA5', '#4ECDC4', '#45B7D1', '#96CEB4']
+        
         fig2 = go.Figure(data=[
             go.Bar(y=top_features['feature_ko'], x=top_features['importance'], orientation='h',
-                   marker=dict(color='#E50914', line=dict(color='#221F1F', width=2)))
+                   marker=dict(
+                       color=feature_colors[:len(top_features)], 
+                       line=dict(width=0)  # 보더 제거
+                   ))
         ])
         fig2.update_layout(
             title="<b>이탈 예측 주요 요인</b>",
-            title_font_size=20,
+            title_font_size=28,
             title_font_color='#221F1F',
             xaxis_title="<b>중요도</b>",
             yaxis_title="<b>요인</b>",
-            font=dict(color='#221F1F', size=14, family="Arial Black"),
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            height=400
+            font=dict(color='#221F1F', size=18, family="Arial Black"),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            height=400,
+            
+        )
+        
+        # 축 제목과 틱 폰트 크기 개별 설정
+        fig2.update_xaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
+        )
+        fig2.update_yaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
         )
         charts['중요도'] = fig2
     
     # 3. 구독플랜별 이탈률 (데이터가 있는 경우)
-    if '구독플랜' in df.columns:
+    if 'Subscription Plan' in df.columns:
         plan_churn = pd.DataFrame({
-            '구독플랜': df['구독플랜'],
+            '구독플랜': df['Subscription Plan'],
             '이탈확률': churn_proba
         }).groupby('구독플랜')['이탈확률'].mean().sort_values(ascending=False)
         
+        # 구독플랜별 넷플릭스 테마 색상
+        plan_colors = ['#F7931E', '#45B7D1', '#06FFA5']  # 오렌지, 블루, 민트
+        
         fig3 = go.Figure(data=[
             go.Bar(x=plan_churn.index, y=plan_churn.values,
-                   marker=dict(color=['#E50914', '#B81D24', '#8B1538']))
+                   marker=dict(
+                       color=plan_colors[:len(plan_churn)],
+                       line=dict(width=0)  # 보더 제거
+                   ))
         ])
         fig3.update_layout(
             title="<b>구독플랜별 평균 이탈 확률</b>",
-            title_font_size=20,
+            title_font_size=28,
             title_font_color='#221F1F',
             xaxis_title="<b>구독플랜</b>",
             yaxis_title="<b>평균 이탈 확률</b>",
-            font=dict(color='#221F1F', size=14, family="Arial Black"),
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            height=400
+            font=dict(color='#221F1F', size=18, family="Arial Black"),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            height=400,
+            
+        )
+        
+        # 축 제목과 틱 폰트 크기 개별 설정
+        fig3.update_xaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
+        )
+        fig3.update_yaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
         )
         charts['플랜별'] = fig3
     
     # 4. 만족도 vs 참여도 산점도
-    if '고객만족도_1_10' in df.columns and '참여도_1_10' in df.columns:
+    if 'Customer Satisfaction Score (1-10)' in df.columns and 'Engagement Rate (1-10)' in df.columns:
         risk_level = ['안전' if p < 0.3 else '주의' if p < 0.7 else '위험' for p in churn_proba]
-        colors = ['green' if r == '안전' else 'orange' if r == '주의' else '#E50914' for r in risk_level]
+        # 넷플릭스 테마 위험도별 색상
+        colors = ['#06FFA5' if r == '안전' else '#FFD23F' if r == '주의' else '#E50914' for r in risk_level]
         
         fig4 = go.Figure(data=[
-            go.Scatter(x=df['고객만족도_1_10'], y=df['참여도_1_10'],
+            go.Scatter(x=df['Customer Satisfaction Score (1-10)'], y=df['Engagement Rate (1-10)'],
                       mode='markers',
-                      marker=dict(color=colors, size=8, line=dict(color='#221F1F', width=1)),
+                      marker=dict(
+                          color=colors, 
+                          size=12,  # 크기 조금 더 증가
+                          line=dict(width=0),  # 보더 제거
+                          opacity=0.85  # 투명도 조정
+                      ),
                       text=[f'이탈확률: {p:.2f}' for p in churn_proba],
                       hovertemplate='만족도: %{x}<br>참여도: %{y}<br>%{text}<extra></extra>')
         ])
         fig4.update_layout(
             title="<b>고객만족도 vs 참여도 (이탈 위험도별)</b>",
-            title_font_size=20,
+            title_font_size=28,
             title_font_color='#221F1F',
             xaxis_title="<b>고객만족도</b>",
             yaxis_title="<b>참여도</b>",
-            font=dict(color='#221F1F', size=14, family="Arial Black"),
-            plot_bgcolor='white',
-            paper_bgcolor='white',
-            height=400
+            font=dict(color='#221F1F', size=18, family="Arial Black"),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            height=400,
+            
+        )
+        
+        # 축 제목과 틱 폰트 크기 개별 설정
+        fig4.update_xaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
+        )
+        fig4.update_yaxes(
+            title_font_size=20,
+            title_font_color='#221F1F',
+            tickfont_size=16,
+            tickfont_color='#221F1F'
         )
         charts['만족도_참여도'] = fig4
     
@@ -619,6 +880,7 @@ def show_main_page():
     """메인 페이지"""
     
     st.markdown("## 📊 모델 인사이트")
+    st.markdown("**Netflix 회원 이탈 예측 모델의 핵심 분석 결과를 확인해보세요**")
     
     # 인사이트 차트
     fig1, fig2 = create_sample_insights_charts()
@@ -938,6 +1200,7 @@ def show_results_page():
     
     # 핵심 지표
     st.markdown("## 📈 분석 결과 요약")
+    st.markdown("**업로드하신 데이터의 이탈 위험 분석 결과입니다**")
     
     total_customers = len(df)
     high_risk_customers = len([p for p in predictions if p > 0.7])
@@ -995,14 +1258,25 @@ def show_results_page():
                     st.plotly_chart(charts['중요도'], use_container_width=True)
                     # st.markdown('</div>', unsafe_allow_html=True)
         
-        # 추가 차트들
+        # 추가 차트들 (구독플랜별, 만족도vs참여도)
         remaining_charts = {k: v for k, v in charts.items() if k not in ['분포', '중요도']}
         if remaining_charts:
-            for chart_name, chart_fig in remaining_charts.items():
-                with st.container():
-                    st.markdown('<div class="chart-box">', unsafe_allow_html=True)
-                    st.plotly_chart(chart_fig, use_container_width=True)
-                    st.markdown('</div>', unsafe_allow_html=True)
+            # 남은 차트들을 2개씩 한 줄에 배치
+            chart_keys = list(remaining_charts.keys())
+            for i in range(0, len(chart_keys), 2):
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    if i < len(chart_keys):
+                        chart_key = chart_keys[i]
+                        with st.container():
+                            st.plotly_chart(remaining_charts[chart_key], use_container_width=True)
+                
+                with col2:
+                    if i + 1 < len(chart_keys):
+                        chart_key = chart_keys[i + 1]
+                        with st.container():
+                            st.plotly_chart(remaining_charts[chart_key], use_container_width=True)
     
     st.markdown("---")
     
@@ -1012,6 +1286,7 @@ def show_results_page():
     # 이탈 확률 추가
     df_with_prob = df.copy()
     df_with_prob['이탈확률'] = predictions
+    df_with_prob['이탈확률%'] = df_with_prob['이탈확률'].apply(lambda x: '{:.2%}'.format(x))
     df_with_prob['위험도'] = ['높음' if p > 0.7 else '보통' if p > 0.4 else '낮음' for p in predictions]
 
     for (col_name, col_name_ko) in COLUMN_MAPPING.items():
@@ -1029,7 +1304,7 @@ def show_results_page():
     if not high_risk_df.empty:
 
         st.dataframe(
-            high_risk_df[['고객명', '이탈확률', '위험도', '나이대', '월소득(달러)', '구독플랜']].head(20),
+            high_risk_df[['고객명', '이탈확률%', '위험도', '나이대', '월소득(달러)', '구독플랜']].head(20),
             use_container_width=True
         )
         
@@ -1052,26 +1327,27 @@ def show_results_page():
             customer_data = high_risk_df.iloc[customer_idx]
             
             col1, col2 = st.columns(2)
-            
+
             with col1:
                 st.markdown("### 📋 기본 정보")
                 basic_info = {}
                 for col in df.columns[:8]:  # 처음 8개 컬럼
+
                     if col in customer_data:
                         basic_info[col] = customer_data[col]
                 
                 for key, value in basic_info.items():
-                    st.write(f"**{key}**: {value}")
+                    st.write(f"**{COLUMN_MAPPING.get(key,key)}**: {value}")
             
             with col2:
                 st.markdown("### 📊 추가 정보")
                 additional_info = {}
-                for col in df.columns[8:]:  # 나머지 컬럼
+                for col in df.columns[8:16]:  # 나머지 컬럼
                     if col in customer_data:
                         additional_info[col] = customer_data[col]
                 
                 for key, value in additional_info.items():
-                    st.write(f"**{key}**: {value}")
+                    st.write(f"**{COLUMN_MAPPING.get(key,key)}**: {value}")
             
             # 이탈 위험 요인 분석
             st.markdown("### ⚠️ 주요 이탈 위험 요인")
