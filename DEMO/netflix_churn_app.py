@@ -26,9 +26,43 @@ st.set_page_config(
 # 넷플릭스 테마 CSS
 st.markdown("""
 <style>
-    /* 전체 배경 */
+    /* 전체 배경 - 세련된 그라디언트 */
     .main {
-        background-color: #ffffff;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 25%, #f1f3f4 50%, #e8f4f8 75%, #f0f8ff 100%);
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    /* 전체 배경에 패턴 오버레이 */
+    .main::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(229, 9, 20, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.02) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.4) 0%, transparent 40%);
+        pointer-events: none;
+        z-index: -1;
+    }
+    
+    /* 메인 컨테이너 배경 */
+    .main .block-container {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem !important;
+        margin: 1rem auto;
+        box-shadow: 
+            0 20px 60px rgba(0, 0, 0, 0.1),
+            0 8px 25px rgba(229, 9, 20, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        position: relative;
+        z-index: 1;
     }
     
     /* 페이지 상단 앵커 */
@@ -141,17 +175,15 @@ st.markdown("""
     }
     
     /* 파일 업로더 스타일 */
-    .stFileUploader {
-        border: 2px dashed rgba(229, 9, 20, 0.4);
-        border-radius: 15px;
-        padding: 2rem;
-        background-color: #fafafa;
-        transition: all 0.3s ease;
-    }
     
     .stFileUploader:hover {
-        border-color: rgba(229, 9, 20, 0.8);
-        background-color: rgba(229, 9, 20, 0.05);
+        border-color: rgba(229, 9, 20, 0.6);
+        background: linear-gradient(135deg, rgba(229, 9, 20, 0.02) 0%, rgba(248, 252, 255, 0.95) 100%);
+        transform: translateY(-2px);
+        box-shadow: 
+            0 12px 35px rgba(0, 0, 0, 0.1),
+            0 4px 15px rgba(229, 9, 20, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
     
     /* 텍스트 스타일 */
@@ -274,19 +306,22 @@ st.markdown("""
         overflow: visible;
     }
     
-    /* Streamlit 차트 컨테이너 배경 */
-    .stPlotlyChart {
-        background: linear-gradient(135deg, #fcfcfc 0%, #f8f8f8 100%);
-        border-radius: 15px;
-        padding: 1rem;
-        margin: 0.5rem 0;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08), 0 1px 6px rgba(229, 9, 20, 0.05);
-        border: 1px solid rgba(229, 9, 20, 0.08);
-        overflow: visible !important;
+    /* 차트 섹션 세련된 배경 */
+    .stColumns:has(.stPlotlyChart) {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+        border-radius: 20px;
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+        box-shadow: 
+            0 12px 40px rgba(0, 0, 0, 0.08),
+            0 4px 15px rgba(229, 9, 20, 0.04),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
         position: relative;
     }
     
-    .stPlotlyChart::before {
+    .stColumns:has(.stPlotlyChart)::before {
         content: '';
         position: absolute;
         top: 0;
@@ -294,16 +329,30 @@ st.markdown("""
         right: 0;
         bottom: 0;
         background: 
-            radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.02) 0%, transparent 40%),
-            radial-gradient(circle at 85% 85%, rgba(229, 9, 20, 0.015) 0%, transparent 40%);
-        border-radius: 15px;
+            radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.02) 0%, transparent 50%),
+            radial-gradient(circle at 85% 85%, rgba(229, 9, 20, 0.015) 0%, transparent 50%);
+        border-radius: 20px;
         pointer-events: none;
         z-index: 0;
     }
     
-    .stPlotlyChart > div {
+    .stColumns:has(.stPlotlyChart) > * {
         position: relative;
         z-index: 1;
+    }
+    
+    /* 업로드 섹션 배경 */
+    .stFileUploader {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 252, 255, 0.9) 100%);
+        border: 2px dashed rgba(229, 9, 20, 0.3);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 1rem 0;
+        backdrop-filter: blur(8px);
+        box-shadow: 
+            0 8px 25px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
     }
     
     /* Streamlit 컨테이너 내부 차트 여백 조정 */
@@ -491,7 +540,6 @@ def create_sample_insights_charts():
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         height=400,
-        
         margin=dict(l=20, r=20, t=60, b=20)
     )
     
@@ -528,7 +576,6 @@ def create_sample_insights_charts():
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         height=400,
-        
         margin=dict(l=20, r=20, t=60, b=20),
         legend=dict(
             font=dict(size=18, color='#221F1F')
@@ -689,8 +736,7 @@ def create_result_charts(df, churn_proba, feature_importance=None):
         font=dict(color='#221F1F', size=18, family="Arial Black"),
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
-        height=400,
-        
+        height=400
     )
 
     # --- 3. X축 수치 포맷을 퍼센트로 지정 ---
@@ -737,8 +783,7 @@ def create_result_charts(df, churn_proba, feature_importance=None):
             font=dict(color='#221F1F', size=18, family="Arial Black"),
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            height=400,
-            
+            height=400
         )
         
         # 축 제목과 틱 폰트 크기 개별 설정
@@ -782,8 +827,7 @@ def create_result_charts(df, churn_proba, feature_importance=None):
             font=dict(color='#221F1F', size=18, family="Arial Black"),
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            height=400,
-            
+            height=400
         )
         
         # 축 제목과 틱 폰트 크기 개별 설정
@@ -828,8 +872,7 @@ def create_result_charts(df, churn_proba, feature_importance=None):
             font=dict(color='#221F1F', size=18, family="Arial Black"),
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            height=400,
-            
+            height=400
         )
         
         # 축 제목과 틱 폰트 크기 개별 설정
@@ -885,21 +928,13 @@ def show_main_page():
     # 인사이트 차트
     fig1, fig2 = create_sample_insights_charts()
     
+    
     col1, col2 = st.columns(2)
     with col1:
-        with st.container():
-            # st.markdown('<div class="chart-box">', unsafe_allow_html=True)
-            st.plotly_chart(fig1, use_container_width=True)
-            # st.markdown('</div>', unsafe_allow_html=True)
-    
+        st.plotly_chart(fig1, use_container_width=True)
     with col2:
-        with st.container():
-            # st.markdown('<div class="chart-box">', unsafe_allow_html=True)
-            st.plotly_chart(fig2, use_container_width=True)
-            # st.markdown('</div>', unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
+        st.plotly_chart(fig2, use_container_width=True)
+
     # 파일 업로드 섹션
     st.markdown("## 📁 데이터 업로드")
     st.markdown("### Netflix 회원 데이터를 업로드하여 이탈 위험을 분석해보세요!")
