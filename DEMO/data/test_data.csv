@@ -1,0 +1,26 @@
+﻿Customer ID,Subscription Length (Months),Customer Satisfaction Score (1-10),Daily Watch Time (Hours),Engagement Rate (1-10),Device Used Most Often,Genre Preference,Region,Payment History (On-Time/Delayed),Subscription Plan,Churn status,Support Queries Logged,Age,Monthly Income ($),Promotional Offers Used,Number of Profiles Created
+현명한코끼리,12,10,4.85,4,Tablet,Action,Europe,On-Time,Basic,Yes,10,33,6250,5,2
+반짝이는토끼,12,8,1.75,9,Laptop,Thriller,Europe,On-Time,Basic,Yes,9,28,7018,1,5
+차분한뱀,3,4,2.75,9,Smart TV,Comedy,Asia,On-Time,Premium,Yes,3,18,1055,1,5
+황금빛퓨마,3,7,3,9,Smart TV,Drama,Europe,Delayed,Premium,Yes,5,32,6707,5,4
+영리한곰,24,2,1.37,5,Mobile,Drama,North America,On-Time,Standard,Yes,2,59,1506,3,5
+노란다람쥐,3,4,4.95,3,Tablet,Romance,Africa,Delayed,Basic,Yes,7,69,5581,4,3
+아주빠른사자,12,4,0.71,3,Tablet,Thriller,Africa,Delayed,Standard,Yes,3,25,2238,2,3
+아주빠른호랑이,6,5,3.54,2,Laptop,Romance,South America,On-Time,Standard,No,4,49,3630,5,3
+매혹적인참새,6,9,3.79,1,Laptop,Drama,Africa,On-Time,Basic,Yes,6,27,4535,1,4
+천진난만한기린,3,6,3.61,6,Laptop,Action,North America,On-Time,Premium,No,0,56,7395,2,1
+기묘한코뿔소,1,9,2.88,9,Laptop,Sci-Fi,North America,Delayed,Basic,Yes,3,27,1660,0,2
+힘센다람쥐,6,7,0.78,6,Desktop,Thriller,Europe,On-Time,Basic,No,3,44,9436,0,5
+은빛비둘기,3,3,1.17,9,Laptop,Romance,Asia,Delayed,Premium,Yes,8,70,4582,0,3
+작은뱀,1,2,2.7,3,Tablet,Comedy,South America,Delayed,Standard,Yes,5,62,3258,2,1
+작은수달,6,3,2.01,6,Smart TV,Romance,Asia,Delayed,Premium,Yes,7,36,7283,2,1
+노란나무늘보,3,1,0.77,10,Tablet,Sci-Fi,Africa,On-Time,Premium,Yes,5,27,4807,4,5
+기발한알파카,6,2,0.78,2,Laptop,Drama,Asia,Delayed,Basic,Yes,10,43,9913,3,1
+뜨거운달팽이,3,3,4.82,2,Laptop,Action,Africa,On-Time,Standard,Yes,3,60,7265,5,3
+용감한여우,1,9,1.08,7,Smart TV,Sci-Fi,Asia,Delayed,Basic,Yes,9,56,1229,0,4
+사나운독수리,6,2,4.27,9,Desktop,Romance,Europe,Delayed,Basic,Yes,6,48,6091,4,2
+자유로운매미,6,3,4.91,3,Tablet,Action,Asia,On-Time,Premium,Yes,3,70,5614,0,4
+자유로운수달,12,4,3.56,6,Tablet,Drama,Africa,On-Time,Basic,Yes,6,44,8947,3,4
+힘센여우,24,7,0.81,1,Desktop,Documentary,North America,On-Time,Premium,Yes,7,67,6720,3,5
+투명한앵무새,24,5,3.36,8,Tablet,Sci-Fi,Asia,On-Time,Standard,Yes,0,43,6368,1,5
+차분한코알라,6,2,3.11,5,Laptop,Romance,Africa,Delayed,Premium,Yes,4,55,7359,0,5
