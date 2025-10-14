@@ -1,9 +1,12 @@
-
+<div align="center">
+ 
 # 🎬 넷플릭스 유저 특성에 따른 구독 이탈 예측
 
-## **👥** 팀 소개
+</div>
 
-**팀명:** **다섯플릭스**
+## 👥 팀 소개
+
+**팀명: 다섯플릭스**
 
 <div align="center">
  
@@ -18,7 +21,7 @@
 
 ---
 
-## **🎯** 프로젝트 개요
+## 🎯 프로젝트 개요
 
 **프로젝트 명:** 넷플릭스 유저 특성에 따른 구독 이탈 예측
 
@@ -67,7 +70,7 @@
 
 ---
 
-## **📄** WBS
+## 📄 WBS
 
 (노션 프로젝트 기획 캡쳐)
 
@@ -81,44 +84,14 @@
 
 ---
 
-## **📊** 데이터 전처리 결과서 (EDA 기반)
+## 📊 데이터 전처리 결과서 (EDA 기반)
 
-### **1️⃣ 데이터 로드**
+### 1️⃣ 데이터 출처
 
 [NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
 
-```markdown
-rename_map = {
-    "Customer ID": "고객번호",
-    "Subscription Length (Months)": "구독기간_개월",
-    "Customer Satisfaction Score (1-10)": "고객만족도_1_10",
-    "Daily Watch Time (Hours)": "일일시청시간_시간",
-    "Engagement Rate (1-10)": "참여도_1_10",
-    "Device Used Most Often": "주이용기기",
-    "Genre Preference": "선호장르",
-    "Region": "지역",
-    "Payment History (On-Time/Delayed)": "결제이력_정시_지연",
-    "Subscription Plan": "구독플랜",
-    "Churn status": "이탈여부",
-    "Support Queries Logged": "지원문의_건수",
-    "Age": "나이",
-    "Monthly Income ($)": "월소득_달러",
-    "Promotional Offers Used": "프로모션_사용",
-    "Number of Profiles Created": "생성프로필수",
-    "Unnamed: 16": "미지정_16",
-    "Unnamed: 17": "미지정_17",
-    "Unnamed: 18": "미지정_18",
-}
-```
 
-### **2️⃣ 데이터 구조와 기초 통계 확인**
-
-| **Info** | **Describe** |
-| --- | --- |
-| (info 캡처) | (descibe 캡처) |
-
-
-### **3️⃣ 결측치 및 이상치 탐색**
+### 2️⃣ 결측치 및 이상치 탐색
 
 - **Customer ID (고객번호)**
     - 정상: C123456 형태
@@ -133,11 +106,11 @@ rename_map = {
 - **극소수 데이터**
     - Device, Genre, Region, Payment 등 0.3% 수준 → 제거 또는 통합 처리 필요
 
-### **4️⃣ 데이터 시각화를 통한 탐색**
+### 3️⃣ 데이터 시각화를 통한 탐색
 
 (시각화 자료 - 히트맵 & 박스플롯 & 막대그래프)
 
-### 5️⃣ 데이터 정제 및 전처리
+### 4️⃣ 데이터 정제 및 전처리
 
 1. **중복 및 결측치 처리**
     - **전체 중복 데이터 제거**
@@ -167,7 +140,7 @@ rename_map = {
     | `Region` | Eurasia | 0.32% |
     | `Payment History` | Late | 0.32% |
 
-### 6️⃣ 피처 엔지니어링
+### 5️⃣ 피처 엔지니어링
 
 - **범주화 작업:**
     - `Daily Watch Time (Hours)` →  1시간 단위 구간화
