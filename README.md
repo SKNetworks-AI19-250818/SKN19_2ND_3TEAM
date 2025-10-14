@@ -1,6 +1,6 @@
 <div align="center">
  
-# 🎬 넷플릭스 유저 특성에 따른 구독 이탈 예측
+# 🎥 넷플릭스 유저 특성에 따른 구독 이탈 예측
 
 </div>
 
@@ -16,7 +16,6 @@
 | <div align="center">[![GitHub](https://img.shields.io/badge/GitHub-WindyAle-181717?style=flat&logo=github&logoColor=white)](https://github.com/WindyAle)</div> | <div align="center">[![GitHub](https://img.shields.io/badge/GitHub-KIMjjjjjjjj-181717?style=flat&logo=github&logoColor=white)](https://github.com/KIMjjjjjjjj)</div> | <div align="center">[![GitHub](https://img.shields.io/badge/GitHub-WhatSupYap-181717?style=flat&logo=github&logoColor=white)](https://github.com/WhatSupYap)</div> | <div align="center">[![GitHub](https://img.shields.io/badge/GitHub-distecter-181717?style=flat&logo=github&logoColor=white)](https://github.com/distecter)</div> | <div align="center">[![GitHub](https://img.shields.io/badge/GitHub-vibevibe26-181717?style=flat&logo=github&logoColor=white)](https://github.com/vibevibe26)</div> |
 
 </div>
-
 
 
 ---
@@ -46,22 +45,23 @@
 
 ## **🛠️** 기술 스택
 
-- **언어 및 라이브러리:** 
+**언어 및 라이브러리:** 
 
 ![Python](https://img.shields.io/badge/Python-3.12.7-3776AB?style=flat&logo=python&logoColor=white) 
 ![Pandas](https://img.shields.io/badge/Pandas-2.3.2-150458?style=flat&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-2.1.3-013243?style=flat&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.6-003366?style=flat&logo=plotly&logoColor=white)
 
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.10.6-003366?style=flat&logo=plotly&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?style=flat&logo=python&logoColor=white)
 ![Plotly](https://img.shields.io/badge/Plotly-5.24.1-3F4F75?style=flat&logo=plotly&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.39.0-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 
-- **머신러닝:**
 
-![LightGBM](https://img.shields.io/badge/LightGBM-4.5.0-017A17?style=flat&logo=lightgbm&logoColor=white)
+**머신러닝 및 프론트엔드:**
+  
+![Streamlit](https://img.shields.io/badge/Model-LightGBM-017A17?style=flat&logo=LightGBM&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 
-- **개발 환경 및 협업 도구:**
+**개발 환경 및 협업 도구:**
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
@@ -72,23 +72,34 @@
 
 ## 📄 WBS
 
+```mermaid
+flowchart LR
+    A[데이터 수집]:::blueNode --> B[데이터 탐색]:::greenNode
+    B --> C[정제 및 전처리]:::yellowNode
+    C --> D[피처 엔지니어링]:::redNode
+    D --> E[모델 학습 및 평가]:::purpleNode
+    E --> F[Streamlit 대시보드]:::orangeNode
+
+    %% 노드 스타일 정의
+    classDef blueNode fill:#cce5ff,stroke:#3399ff,stroke-width:2px;
+    classDef greenNode fill:#d4edda,stroke:#28a745,stroke-width:2px;
+    classDef yellowNode fill:#fff3cd,stroke:#ffc107,stroke-width:2px;
+    classDef redNode fill:#f8d7da,stroke:#dc3545,stroke-width:2px;
+    classDef purpleNode fill:#e2d6f9,stroke:#6f42c1,stroke-width:2px;
+    classDef orangeNode fill:#ffe5b4,stroke:#ff851b,stroke-width:2px;
+
+```
+
 (노션 프로젝트 기획 캡쳐)
 
-1. **데이터 수집 및 로드**
-2. **데이터 탐색(EDA)**
-    1. **데이터 정제 및 전처리**
-3. **피처 엔지니어링**
-4. **모델 학습 및 평가**
-5. **프론트엔드(Streamlit)**
-6. **최종 보고서 작성**
 
 ---
 
-## 📊 데이터 전처리 결과서 (EDA 기반)
+## 🎬 데이터 전처리 결과서 (EDA 기반)
 
 ### 1️⃣ 데이터 출처
 
-[NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
+[🔗NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
 
 
 ### 2️⃣ 결측치 및 이상치 탐색
@@ -152,7 +163,6 @@
     - `Region`별 평균 요금 데이터를 사용자 데이터에 결합
 - **새로운 복합 컬럼 생성:**
     
-    
     | 새로운 파생 변수 | 설명 |
     | --- | --- |
     | `User_Subscription_Price` | 지역별 평균 요금 데이터 결합 |
@@ -160,6 +170,8 @@
     | `Watch_Time_per_Dollar` | 요금당 시청 시간 (1달러당 얼마나 보는지) |
     | `Satisfaction_per_Dollar` | 요금당 만족도 |
     | `Queries_per_Month` | 월 평균 고객 문의 수 |
+
+  
 
 ### ⚙️ 최종 컬럼 및 시각화
 
@@ -174,14 +186,20 @@
 - **모델**: LightGBM
 - **평가 지표:**
     
-    
     | 지표 | 점수 |
     | --- | --- |
     | 정확도 (Accuracy) |  |
     | 정밀도 (Precision) |  |
     | 재현율 (Recall) |  |
     | F1 Score |  |
+  
 - **주요 피처:**
+
+    | Feature | 중요도 |
+    |---------|--------|
+    | ff | <span style="color:red">★★★★☆</span> |
+    | ff | <span style="color:orange">★★★☆☆</span> |
+    | ff | <span style="color:green">★★☆☆☆</span> |
 
 ---
 
@@ -189,7 +207,8 @@
 
 - **Streamlit:**
     - 예측 확률 및 실제 이탈 여부 비교
-  
+<img width="1168" height="809" alt="image" src="https://github.com/user-attachments/assets/4d2eb71b-299f-40b5-bf25-7c3e76efa762" />
+
 - **주요 인사이트:**
     - (인사이트)
     
