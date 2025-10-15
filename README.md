@@ -308,13 +308,14 @@ flowchart LR
     | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
 
 - **예측 결과 분포 확인**
-  
+
 <div align="center">
-<img width="1064" height="719" alt="image" src="https://github.com/user-attachments/assets/cfffc7b6-3023-4897-b215-f5ef1a56c0fd" />
+<img width="1555" height="1060" alt="image" src="https://github.com/user-attachments/assets/c8da358c-bfd5-41ca-932e-a017d7a3b2af" />
 </div>
 
 
 - **임계치에 따른 성능 지표 변화**
+
 <div align="center">
 <img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/aa00c741-9e25-4899-81f9-f922f039aca4" />
 </div>
