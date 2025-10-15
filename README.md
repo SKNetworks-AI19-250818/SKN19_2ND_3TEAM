@@ -6,7 +6,9 @@
 
 ## 👥 팀 소개
 
-## 🍿 다섯플릭스
+## 🍿 다섯플릭스 
+[![Notion](https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white)](https://www.notion.so/3-28b0413479c4818d911dd3df82000d7b?source=copy_link)
+
 
 <div align="center">
  
@@ -109,12 +111,12 @@ flowchart LR
   <tr>
     <td align="center">
       <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
-        <img src="https://img.shields.io/badge/NETFLIX%20사용자%20데이터-Link-blue?style=flat-square" alt="사용자 데이터 링크">
+        <img src="https://img.shields.io/badge/NETFLIX%20사용자%20데이터-Link-blue?style=flat" alt="사용자 데이터 링크">
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
-        <img src="https://img.shields.io/badge/지역별%20구독료%20데이터-Link-green?style=flat-square" alt="지역별 구독료 데이터 링크">
+        <img src="https://img.shields.io/badge/지역별%20구독료%20데이터-Link-green?style=flat" alt="지역별 구독료 데이터 링크">
       </a>
     </td>
   </tr>
@@ -221,6 +223,7 @@ flowchart LR
 
 ### 상관계수 히트맵
 <img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/16f566a9-ffba-4c08-b54c-23bf6d417ad7" />
+<img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/cb12cb7a-bc44-433d-a5f6-0540500a9a57" />
 
 ```markdown
 1. 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group): (-0.7)소득이 낮을수록 가격 부담률이 높고 이탈률과 연관 가능
@@ -232,9 +235,9 @@ flowchart LR
 4. 시청 시간대(Time_group)과 1달러당 시청시간(Watch_Time_per_Dollar): (0.72)시청 시간 대비 가성비 낮은 사용자 이탈률 높음
 ```
 
-### 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group)
+### 월 소득 대비 가격 부담률(Price_Burden_Ratio)과 소득(Income_group)
 <div align="center">
-<img width="712" height="555" alt="image" src="https://github.com/user-attachments/assets/1e352b3d-e342-4407-b2e6-0277c9516409" />
+<img width="712" height="556" alt="image" src="https://github.com/user-attachments/assets/e38e867d-8bfb-4169-b8bc-fa974ee05c4b" />
 </div>
 
 ---
@@ -302,7 +305,7 @@ flowchart LR
     | Genre Preference (선호 장르) | <span style="color:green">★★★☆☆</span> |
     | Subscription Length (구독 기간) | <span style="color:green">★★☆☆☆</span> |
     | Monthly Income (월 소득) | <span style="color:green">★★☆☆☆</span> |
-    | Price_Burden_Ratio | <span style="color:green">★★☆☆☆</span> |
+    | Price_Burden_Ratio (월 소득 대비 부담률) | <span style="color:green">★★☆☆☆</span> |
     | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
 
 - **예측 결과 분포 확인**
@@ -338,3 +341,7 @@ flowchart LR
 ---
 
 ## 💬 한 줄 회고
+
+--
+
+
