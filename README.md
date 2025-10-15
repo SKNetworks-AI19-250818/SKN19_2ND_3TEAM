@@ -125,7 +125,7 @@ flowchart LR
       <img width="600" src="https://github.com/user-attachments/assets/596bb4fb-962b-4996-b66a-ede5c41fdb0d" alt="사용자 데이터">
     </td>
     <td align="center">
-      <img width="680" src="https://github.com/user-attachments/assets/6a3a8655-7da1-4732-b6de-3fa00626854b" alt="지역별 구독료 데이터">
+      <img width="680" src="https://github.com/user-attachments/assets/be7750f9-0b35-4269-9c86-17bbfb8c5769" alt="지역별 구독료 데이터">
     </td>
   </tr>
 </table>
