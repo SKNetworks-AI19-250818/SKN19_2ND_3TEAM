@@ -23,7 +23,7 @@
 ## 🎯 프로젝트 개요
 
 <div align="center">
-<img width="1079" height="903" alt="image" src="https://github.com/user-attachments/assets/8eb8b568-293e-4d44-936f-9a9e0179ff56" />
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/8eb8b568-293e-4d44-936f-9a9e0179ff56" />
 </div>
 
 **프로젝트 명:** 넷플릭스 유저 특성에 따른 구독 이탈 예측
@@ -283,9 +283,10 @@ flowchart LR
 
 
 - **임계치에 따른 성능 지표 변화**
-  
-<img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/6323983c-ca59-400b-89ab-54e7c3bd8eba" />
 
+<div align="center">
+<img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/6323983c-ca59-400b-89ab-54e7c3bd8eba" />
+</div>
 
 ---
 
