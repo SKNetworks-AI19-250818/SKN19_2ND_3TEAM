@@ -1,0 +1,21 @@
+Subscription Length (Months),Customer Satisfaction Score (1-10),Daily Watch Time (Hours),Engagement Rate (1-10),Device Used Most Often,Genre Preference,Region,Payment History (On-Time/Delayed),Subscription Plan,Churn status,Support Queries Logged,Age,Monthly Income ($),Promotional Offers Used,Number of Profiles Created
+12,8,2.5,7,Smart TV,Action,North America,On-Time,Premium,No,1,28,4500,2,3
+6,4,0.8,3,Mobile,Romance,Europe,Delayed,Basic,Yes,5,45,3200,0,1
+24,9,4.2,9,Laptop,Documentary,Asia,On-Time,Standard,No,0,35,5800,3,4
+8,5,1.2,4,Tablet,Comedy,North America,On-Time,Basic,Yes,3,52,2800,1,2
+18,7,3.1,8,Smart TV,Drama,Europe,On-Time,Premium,No,2,29,6200,2,3
+3,3,0.5,2,Mobile,Horror,Asia,Delayed,Basic,Yes,8,38,2100,0,1
+15,8,2.8,7,Laptop,Sci-Fi,North America,On-Time,Standard,No,1,42,4800,1,2
+9,6,1.8,5,Smart TV,Comedy,Europe,Delayed,Basic,No,4,33,3500,2,3
+21,9,3.8,9,Tablet,Action,Asia,On-Time,Premium,No,0,26,7100,4,5
+5,2,0.3,1,Mobile,Romance,North America,Delayed,Basic,Yes,12,48,1800,0,1
+30,9,5.2,10,Smart TV,Documentary,Europe,On-Time,Premium,No,0,31,8500,5,4
+7,4,1.1,3,Laptop,Horror,Asia,On-Time,Basic,Yes,6,41,2900,1,2
+14,7,2.4,6,Tablet,Drama,North America,On-Time,Standard,No,2,36,5200,3,3
+11,5,1.6,4,Mobile,Sci-Fi,Europe,Delayed,Basic,Yes,7,44,3100,0,1
+19,8,3.5,8,Smart TV,Action,Asia,On-Time,Premium,No,1,27,6800,3,4
+4,3,0.7,2,Laptop,Comedy,North America,Delayed,Basic,Yes,9,50,2300,0,2
+25,9,4.8,9,Tablet,Documentary,Europe,On-Time,Standard,No,0,32,7500,4,3
+10,6,2.1,5,Smart TV,Romance,Asia,On-Time,Basic,No,3,39,4100,2,2
+16,7,2.9,7,Mobile,Horror,North America,On-Time,Standard,No,2,34,5600,1,3
+6,4,0.9,3,Laptop,Drama,Europe,Delayed,Basic,Yes,8,47,2700,0,1
