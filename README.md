@@ -294,7 +294,12 @@ flowchart LR
 
 - **Streamlit:**
     - 예측 확률 및 실제 이탈 여부 비교
-<img width="1168" height="809" alt="image" src="https://github.com/user-attachments/assets/4d2eb71b-299f-40b5-bf25-7c3e76efa762" />
+    <img width="1878" height="768" alt="image" src="https://github.com/user-attachments/assets/d31eca55-6b34-4524-875d-403e1b62bc30" />
+	<img width="1870" height="917" alt="image" src="https://github.com/user-attachments/assets/b7e70a0b-ebeb-4804-b7c8-75736ef1cc6f" />
+	<img width="1880" height="463" alt="image" src="https://github.com/user-attachments/assets/c1f4012d-fc55-4ec2-b55f-6b248e37585a" />
+	<img width="1889" height="953" alt="image" src="https://github.com/user-attachments/assets/5fd43521-1ea8-4b18-b295-505663ae2c61" />
+
+
 
 - **주요 인사이트:**
     - (인사이트)
