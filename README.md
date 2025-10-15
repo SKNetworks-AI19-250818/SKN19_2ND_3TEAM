@@ -98,10 +98,20 @@ flowchart LR
 
 ## 🎬 데이터 전처리 결과서 (EDA 기반)
 
-### 1️⃣ 데이터 출처
+### 1️⃣ 데이터 구조
 
 [🔗NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
 
+| **Info** | **Describe** |
+| --- | --- |
+| <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/208351ef-81ef-4e0c-a438-f3086cd7b480" /> | <img width="662" height="364" alt="image" src="https://github.com/user-attachments/assets/6d053750-1292-40ad-adf9-227e4c8a6bc7" /> |
+
+
+[🔗지역별 평균 구독료 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
+
+| **Info** | **Describe** |
+| --- | --- |
+| <img width="687" height="671" alt="image" src="https://github.com/user-attachments/assets/14ccacde-9346-4d52-9983-7993d968c05b" /> | <img width="1339" height="361" alt="image" src="https://github.com/user-attachments/assets/43664b9e-fc7a-4b04-8877-72a311077e1c" /> |
 
 ### 2️⃣ 결측치 및 이상치 탐색
 
@@ -120,7 +130,8 @@ flowchart LR
 
 ### 3️⃣ 데이터 시각화를 통한 탐색
 
-(시각화 자료 - 히트맵 & 박스플롯 & 막대그래프)
+<img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/76a274b1-825b-4453-ad28-802ab93b7188" />
+
 
 ### 4️⃣ 데이터 정제 및 전처리
 
@@ -178,6 +189,8 @@ flowchart LR
 (최종 컬럼)
 
 (시각화와 인사이트)
+<img width="1783" height="2484" alt="image" src="https://github.com/user-attachments/assets/2edc199f-0b22-4f80-92b2-a8b3777eb17b" />
+
 
 ---
 
@@ -206,6 +219,12 @@ flowchart LR
     | Monthly Income (월 소득) | <span style="color:green">★★☆☆☆</span> |
     | Price_Burden_Ratio | <span style="color:green">★★☆☆☆</span> |
     | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
+
+|  |  |
+|---------|--------|
+| <img width="669" height="565" alt="image" src="https://github.com/user-attachments/assets/66e0914e-2036-4dec-8bab-bd7549585e50" /> | <img width="853" height="550" alt="image" src="https://github.com/user-attachments/assets/ab3e8b95-d38c-4f51-981d-7b5bb405c158" /> |
+
+
 ---
 
 ## 🧪 수행 결과
