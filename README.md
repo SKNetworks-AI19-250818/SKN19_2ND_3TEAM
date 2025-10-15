@@ -223,7 +223,6 @@ flowchart LR
 
 ### 상관계수 히트맵
 <img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/16f566a9-ffba-4c08-b54c-23bf6d417ad7" />
-<img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/cb12cb7a-bc44-433d-a5f6-0540500a9a57" />
 
 ```markdown
 1. 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group): (-0.7)소득이 낮을수록 가격 부담률이 높고 이탈률과 연관 가능
@@ -342,6 +341,7 @@ flowchart LR
 
 ## 💬 한 줄 회고
 
---
+
+---
 
 
