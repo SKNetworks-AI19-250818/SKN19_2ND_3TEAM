@@ -337,8 +337,6 @@ flowchart LR
     - **Regularization (과적합 방지)의 효과**
         - GridSearchCV에서는 테스트하지 않았던 colsample_bytree(트리 생성 시 특성 샘플링 비율)와 subsample(데이터 샘플링 비율) 파라미터가 RandomizedSearchCV와 HyperOpt에서 중요한 역할
 
-- **하이퍼 파라미터 튜닝 후 혼동 행렬**
-
 ```Python
 # 가장 높은 성능을 보인 RandomSearchCV의 파라미터 적용
 best_params = {
