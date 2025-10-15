@@ -105,18 +105,29 @@ flowchart LR
 
 ### 1️⃣ 데이터 구조
 
-[🔗NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
+        <img src="https://img.shields.io/badge/NETFLIX%20사용자%20데이터-Link-blue?style=flat-square" alt="사용자 데이터 링크">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
+        <img src="https://img.shields.io/badge/지역별%20구독료%20데이터-Link-green?style=flat-square" alt="지역별 구독료 데이터 링크">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="600" src="https://github.com/user-attachments/assets/596bb4fb-962b-4996-b66a-ede5c41fdb0d" alt="사용자 데이터">
+    </td>
+    <td align="center">
+      <img width="680" src="https://github.com/user-attachments/assets/6a3a8655-7da1-4732-b6de-3fa00626854b" alt="지역별 구독료 데이터">
+    </td>
+  </tr>
+</table>
 
-| **Info** | **Describe** |
-| --- | --- |
-| <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/208351ef-81ef-4e0c-a438-f3086cd7b480" /> | <img width="662" height="364" alt="image" src="https://github.com/user-attachments/assets/6d053750-1292-40ad-adf9-227e4c8a6bc7" /> |
-
-
-[🔗지역별 평균 구독료 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
-
-| **Info** | **Describe** |
-| --- | --- |
-| <img width="687" height="671" alt="image" src="https://github.com/user-attachments/assets/14ccacde-9346-4d52-9983-7993d968c05b" /> | <img width="1339" height="361" alt="image" src="https://github.com/user-attachments/assets/43664b9e-fc7a-4b04-8877-72a311077e1c" /> |
 
 ---
 
