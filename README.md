@@ -22,6 +22,10 @@
 
 ## 🎯 프로젝트 개요
 
+<div align="center">
+<img width="1079" height="903" alt="image" src="https://github.com/user-attachments/assets/8eb8b568-293e-4d44-936f-9a9e0179ff56" />
+</div>
+
 **프로젝트 명:** 넷플릭스 유저 특성에 따른 구독 이탈 예측
 
 **프로젝트 소개:**
@@ -91,8 +95,9 @@ flowchart LR
 
 ```
 
+<div align="center">
 <img width="892" height="763" alt="image" src="https://github.com/user-attachments/assets/f3d86257-861d-4bac-902c-c02623c9ddee" />
-
+</div>
 
 ---
 
@@ -179,13 +184,13 @@ flowchart LR
     - `Region`별 평균 요금 데이터를 사용자 데이터에 결합
 - **새로운 복합 컬럼 생성:**
     
-    | 새로운 파생 변수 | 설명 |
-    | --- | --- |
-    | `User_Subscription_Price` | 지역별 평균 요금 데이터 결합 |
-    | `Price_Burden_Ratio` | 소득 대비 구독 요금 비율 |
-    | `Watch_Time_per_Dollar` | 요금당 시청 시간 (1달러당 얼마나 보는지) |
-    | `Satisfaction_per_Dollar` | 요금당 만족도 |
-    | `Queries_per_Month` | 월 평균 고객 문의 수 |
+	| 새로운 파생 변수                 | 설명                       | 사용한 원본 컬럼                                                       |
+	| ------------------------- | ------------------------ | --------------------------------------------------------------- |
+	| `User_Subscription_Price` | 지역별 평균 요금 데이터 결합         | 지역별 요금 데이터                                                      |
+	| `Price_Burden_Ratio`      | 소득 대비 구독 요금 비율           | `User_Subscription_Price`, `Monthly Income ($)`                 |
+	| `Watch_Time_per_Dollar`   | 요금당 시청 시간 (1달러당 얼마나 보는지) | `Daily Watch Time (Hours)`, `User_Subscription_Price`           |
+	| `Satisfaction_per_Dollar` | 요금당 만족도                  | `Customer Satisfaction Score (1-10)`, `User_Subscription_Price` |
+	| `Queries_per_Month`       | 월 평균 고객 문의 수             | `Support Queries Logged`, `Subscription Length (Months)`        |
 
   
 
@@ -204,8 +209,9 @@ flowchart LR
 
 4. 시청 시간대(Time_group)과 1달러당 시청시간(Watch_Time_per_Dollar): (0.72)시청 시간 대비 가성비 낮은 사용자 이탈률 높음
 ```
-
+<div align="center">
 <img width="712" height="555" alt="image" src="https://github.com/user-attachments/assets/1e352b3d-e342-4407-b2e6-0277c9516409" />
+</div>
 
 <img width="1783" height="2484" alt="image" src="https://github.com/user-attachments/assets/2edc199f-0b22-4f80-92b2-a8b3777eb17b" />
 
@@ -240,6 +246,7 @@ flowchart LR
 4. 연령대 × 장르: 10~20대는 전 장르에서 거의 100%에 가까운 이탈률을 보이고 70대 이상은 Sci-Fi/Documentary 장르에서 상대적으로 낮은 이탈율을 보임
 ```
 
+
 ---
 
 ## 🤖 머신러닝 학습 결과서
@@ -269,18 +276,16 @@ flowchart LR
     | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
 
 - **예측 결과 분포 확인**
+  
 <div align="center">
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/66e0914e-2036-4dec-8bab-bd7549585e50" width="400"></td>
-    <td><img src="https://github.com/user-attachments/assets/ab3e8b95-d38c-4f51-981d-7b5bb405c158" width="400"></td>
-  </tr>
-</table>
+<img width="1064" height="719" alt="image" src="https://github.com/user-attachments/assets/cfffc7b6-3023-4897-b215-f5ef1a56c0fd" />
+</div>
 
 
 - **임계치에 따른 성능 지표 변화**
+  
 <img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/6323983c-ca59-400b-89ab-54e7c3bd8eba" />
-</div>
+
 
 ---
 
