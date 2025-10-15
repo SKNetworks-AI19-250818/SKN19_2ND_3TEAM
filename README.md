@@ -91,7 +91,7 @@ flowchart LR
 
 ```
 
-(노션 프로젝트 기획 캡쳐)
+<img width="892" height="763" alt="image" src="https://github.com/user-attachments/assets/f3d86257-861d-4bac-902c-c02623c9ddee" />
 
 
 ---
@@ -130,8 +130,13 @@ flowchart LR
 
 ### 3️⃣ 데이터 시각화를 통한 탐색
 
+<div align="center">
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/70082a7d-7574-4836-81df-1b9fede27300" />
+
 <img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/76a274b1-825b-4453-ad28-802ab93b7188" />
 
+</div>
 
 ### 4️⃣ 데이터 정제 및 전처리
 
@@ -188,9 +193,52 @@ flowchart LR
 
 (최종 컬럼)
 
-(시각화와 인사이트)
+<img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/16f566a9-ffba-4c08-b54c-23bf6d417ad7" />
+
+```markdown
+1. 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group): (-0.7)소득이 낮을수록 가격 부담률이 높고 이탈률과 연관 가능
+
+2. 고객 만족도(Customer Satifaction Score)와 1달러당 만족도(Satisfaction_per_Dollar): (0.76)가격 대비 만족도가 낮은 사용자 이탈률 높음
+
+3. 구독기간(Subscription Length)과 월 평균 문의 수(Queries_per_Month): (-0.51)구독기간이 길수록 월 평균 문의 수는 낮음
+
+4. 시청 시간대(Time_group)과 1달러당 시청시간(Watch_Time_per_Dollar): (0.72)시청 시간 대비 가성비 낮은 사용자 이탈률 높음
+```
+
+<img width="712" height="555" alt="image" src="https://github.com/user-attachments/assets/1e352b3d-e342-4407-b2e6-0277c9516409" />
+
 <img width="1783" height="2484" alt="image" src="https://github.com/user-attachments/assets/2edc199f-0b22-4f80-92b2-a8b3777eb17b" />
 
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/c5cb9c16-519a-41c4-9cea-a3488d8b3eb3" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/31db387b-2249-4196-930f-96df8ebfb7bf" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/fa44a14f-5312-4c47-8db0-15aa44172cea" width="300"></td>
+  </tr>
+</table>
+
+
+```markdown
+1. 지원 문의 수(Support Queries): 문의가 많을수록 이탈률이 높음
+	- 지원 문의 많은 사용자 → 불만족 징후 보임
+
+2. 연령대(Age_group): 젊은층일수록 이탈율이 높음
+```
+
+<img width="1740" height="1383" alt="image" src="https://github.com/user-attachments/assets/a728bc5d-2cf6-4f56-a152-394396363694" />
+
+```markdown
+1. 장르 × 기기: Comedy + Laptop, Documentary + Laptop 조합에서 상대적으로 이탈률 높음
+
+2. 지역 × 구독 플랜: Europe + Premium 조합에서 이탈률 상대적으로 높음
+
+3. 결제 이력 × 구독 플랜: Delayed + Premium 사용자 이탈률 높음
+
+→ 프리미엄 사용자 이탈 주의
+
+4. 연령대 × 장르: 10~20대는 전 장르에서 거의 100%에 가까운 이탈률을 보이고 70대 이상은 Sci-Fi/Documentary 장르에서 상대적으로 낮은 이탈율을 보임
+```
 
 ---
 
@@ -220,13 +268,19 @@ flowchart LR
     | Price_Burden_Ratio | <span style="color:green">★★☆☆☆</span> |
     | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
 
-|  |  |
-|---------|--------|
-| <img width="669" height="565" alt="image" src="https://github.com/user-attachments/assets/66e0914e-2036-4dec-8bab-bd7549585e50" /> | <img width="853" height="550" alt="image" src="https://github.com/user-attachments/assets/ab3e8b95-d38c-4f51-981d-7b5bb405c158" /> |
+- **예측 결과 분포 확인**
+<div align="center">
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/66e0914e-2036-4dec-8bab-bd7549585e50" width="400"></td>
+    <td><img src="https://github.com/user-attachments/assets/ab3e8b95-d38c-4f51-981d-7b5bb405c158" width="400"></td>
+  </tr>
+</table>
+
 
 - **임계치에 따른 성능 지표 변화**
 <img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/6323983c-ca59-400b-89ab-54e7c3bd8eba" />
-- 
+</div>
 
 ---
 
