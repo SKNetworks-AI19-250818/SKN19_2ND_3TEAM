@@ -6,7 +6,9 @@
 
 ## 👥 팀 소개
 
-**팀명: 다섯플릭스**
+## 🍿 다섯플릭스 
+[![Notion](https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white)](https://www.notion.so/3-28b0413479c4818d911dd3df82000d7b?source=copy_link)
+
 
 <div align="center">
  
@@ -21,6 +23,10 @@
 ---
 
 ## 🎯 프로젝트 개요
+
+<div align="center">
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/8eb8b568-293e-4d44-936f-9a9e0179ff56" />
+</div>
 
 **프로젝트 명:** 넷플릭스 유저 특성에 따른 구독 이탈 예측
 
@@ -91,17 +97,41 @@ flowchart LR
 
 ```
 
-(노션 프로젝트 기획 캡쳐)
-
+<div align="center">
+<img width="892" height="763" alt="image" src="https://github.com/user-attachments/assets/f3d86257-861d-4bac-902c-c02623c9ddee" />
+</div>
 
 ---
 
 ## 🎬 데이터 전처리 결과서 (EDA 기반)
 
-### 1️⃣ 데이터 출처
+### 1️⃣ 데이터 구조
 
-[🔗NETFLIX 마켓팅 팀과의 협업을 통해 얻은 데이터셋](https://github.com/JackBrowne556/Netflix-Churn-Project)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
+        <img src="https://img.shields.io/badge/NETFLIX%20사용자%20데이터-Link-blue?style=flat" alt="사용자 데이터 링크">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JackBrowne556/Netflix-Churn-Project">
+        <img src="https://img.shields.io/badge/지역별%20구독료%20데이터-Link-green?style=flat" alt="지역별 구독료 데이터 링크">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="600" src="https://github.com/user-attachments/assets/596bb4fb-962b-4996-b66a-ede5c41fdb0d" alt="사용자 데이터">
+    </td>
+    <td align="center">
+      <img width="680" src="https://github.com/user-attachments/assets/be7750f9-0b35-4269-9c86-17bbfb8c5769" alt="지역별 구독료 데이터">
+    </td>
+  </tr>
+</table>
 
+
+---
 
 ### 2️⃣ 결측치 및 이상치 탐색
 
@@ -117,10 +147,21 @@ flowchart LR
     - 허용 값 외 항목 → 유사 값 치환 처리 필요
 - **극소수 데이터**
     - Device, Genre, Region, Payment 등 0.3% 수준 → 제거 또는 통합 처리 필요
+ 
+---
+
 
 ### 3️⃣ 데이터 시각화를 통한 탐색
 
-(시각화 자료 - 히트맵 & 박스플롯 & 막대그래프)
+<div align="center">
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/70082a7d-7574-4836-81df-1b9fede27300" />
+
+<img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/76a274b1-825b-4453-ad28-802ab93b7188" />
+
+</div>
+
+---
 
 ### 4️⃣ 데이터 정제 및 전처리
 
@@ -147,10 +188,11 @@ flowchart LR
     
     | 컬럼명 | 제거 클래스 | 비율 |
     | --- | --- | --- |
-    | `Device Used Most Often` | Smart_Television | 0.32% |
     | `Genre Preference` | Dramedy | 0.31% |
     | `Region` | Eurasia | 0.32% |
     | `Payment History` | Late | 0.32% |
+   
+---
 
 ### 5️⃣ 피처 엔지니어링
 
@@ -164,21 +206,78 @@ flowchart LR
     - `Region`별 평균 요금 데이터를 사용자 데이터에 결합
 - **새로운 복합 컬럼 생성:**
     
-    | 새로운 파생 변수 | 설명 |
-    | --- | --- |
-    | `User_Subscription_Price` | 지역별 평균 요금 데이터 결합 |
-    | `Price_Burden_Ratio` | 소득 대비 구독 요금 비율 |
-    | `Watch_Time_per_Dollar` | 요금당 시청 시간 (1달러당 얼마나 보는지) |
-    | `Satisfaction_per_Dollar` | 요금당 만족도 |
-    | `Queries_per_Month` | 월 평균 고객 문의 수 |
+	| 새로운 파생 변수                 | 설명                       | 사용한 원본 컬럼                                                       |
+	| ------------------------- | ------------------------ | --------------------------------------------------------------- |
+	| `User_Subscription_Price` | 지역별 평균 요금 데이터 결합         | 지역별 요금 데이터                                                      |
+	| `Price_Burden_Ratio`      | 소득 대비 구독 요금 비율           | `User_Subscription_Price`, `Monthly Income ($)`                 |
+	| `Watch_Time_per_Dollar`   | 요금당 시청 시간 (1달러당 얼마나 보는지) | `Daily Watch Time (Hours)`, `User_Subscription_Price`           |
+	| `Satisfaction_per_Dollar` | 요금당 만족도                  | `Customer Satisfaction Score (1-10)`, `User_Subscription_Price` |
+	| `Queries_per_Month`       | 월 평균 고객 문의 수             | `Support Queries Logged`, `Subscription Length (Months)`        |
 
-  
 
-### ⚙️ 최종 컬럼 및 시각화
+---
 
-(최종 컬럼)
 
-(시각화와 인사이트)
+## ⚙️ 최종 컬럼 및 시각화
+
+
+### 상관계수 히트맵
+<img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/16f566a9-ffba-4c08-b54c-23bf6d417ad7" />
+
+```markdown
+1. 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group): (-0.7)소득이 낮을수록 가격 부담률이 높고 이탈률과 연관 가능
+
+2. 고객 만족도(Customer Satifaction Score)와 1달러당 만족도(Satisfaction_per_Dollar): (0.76)가격 대비 만족도가 낮은 사용자 이탈률 높음
+
+3. 구독기간(Subscription Length)과 월 평균 문의 수(Queries_per_Month): (-0.51)구독기간이 길수록 월 평균 문의 수는 낮음
+
+4. 시청 시간대(Time_group)과 1달러당 시청시간(Watch_Time_per_Dollar): (0.72)시청 시간 대비 가성비 낮은 사용자 이탈률 높음
+```
+
+### 월 소득 대비 가격 부담률(Price_Burden_Ratio)과 소득(Income_group)
+<div align="center">
+<img width="712" height="556" alt="image" src="https://github.com/user-attachments/assets/e38e867d-8bfb-4169-b8bc-fa974ee05c4b" />
+</div>
+
+---
+
+### 고객 특성별 이탈/잔류 수 분포
+<img width="1783" height="2484" alt="image" src="https://github.com/user-attachments/assets/2edc199f-0b22-4f80-92b2-a8b3777eb17b" />
+
+### 고객 특성별 이탈률 비교
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/c5cb9c16-519a-41c4-9cea-a3488d8b3eb3" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/31db387b-2249-4196-930f-96df8ebfb7bf" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/fa44a14f-5312-4c47-8db0-15aa44172cea" width="300"></td>
+  </tr>
+</table>
+
+
+```markdown
+1. 지원 문의 수(Support Queries): 문의가 많을수록 이탈률이 높음
+	- 지원 문의 많은 사용자 → 불만족 징후 보임
+
+2. 연령대(Age_group): 젊은층일수록 이탈율이 높음
+```
+
+---
+
+### 고객 속성 조합별 이탈률 분석
+<img width="1740" height="1383" alt="image" src="https://github.com/user-attachments/assets/a728bc5d-2cf6-4f56-a152-394396363694" />
+
+```markdown
+1. 장르 × 기기: Comedy + Laptop, Documentary + Laptop 조합에서 상대적으로 이탈률 높음
+
+2. 지역 × 구독 플랜: Europe + Premium 조합에서 이탈률 상대적으로 높음
+
+3. 결제 이력 × 구독 플랜: Delayed + Premium 사용자 이탈률 높음
+
+→ 프리미엄 사용자 이탈 주의
+
+4. 연령대 × 장르: 10~20대는 전 장르에서 거의 100%에 가까운 이탈률을 보이고 70대 이상은 Sci-Fi/Documentary 장르에서 상대적으로 낮은 이탈율을 보임
+```
+
 
 ---
 
@@ -189,18 +288,74 @@ flowchart LR
     
     | 지표 | 점수 |
     | --- | --- |
-    | 정확도 (Accuracy) |  |
-    | 정밀도 (Precision) |  |
-    | 재현율 (Recall) |  |
-    | F1 Score |  |
+    | 정확도 (Accuracy) | 67% |
+    | 정밀도 (Precision) | 96% |
+    | 재현율 (Recall) | 66% |
+    | F1 Score | 78% |
   
 - **주요 피처:**
 
     | Feature | 중요도 |
     |---------|--------|
-    | ff | <span style="color:red">★★★★☆</span> |
-    | ff | <span style="color:orange">★★★☆☆</span> |
-    | ff | <span style="color:green">★★☆☆☆</span> |
+    | Age Group (연령대) | <span style="color:red">★★★★★</span> |
+    | Promotional Offers Used (쿠폰 사용 횟수) | <span style="color:orange">★★★★★</span> |
+    | Support Queries Logged (총 문의 수) | <span style="color:green">★★★★☆</span> |
+    | Queries Per Month (월별 문의 수) | <span style="color:green">★★★☆☆</span> |
+    | Genre Preference (선호 장르) | <span style="color:green">★★★☆☆</span> |
+    | Subscription Length (구독 기간) | <span style="color:green">★★☆☆☆</span> |
+    | Monthly Income (월 소득) | <span style="color:green">★★☆☆☆</span> |
+    | Price_Burden_Ratio (월 소득 대비 부담률) | <span style="color:green">★★☆☆☆</span> |
+    | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
+
+- **예측 결과 분포 확인**
+
+<div align="center">
+<img width="1555" height="1060" alt="image" src="https://github.com/user-attachments/assets/c8da358c-bfd5-41ca-932e-a017d7a3b2af" />
+</div>
+
+
+- **임계치에 따른 성능 지표 변화**
+
+<div align="center">
+<img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/aa00c741-9e25-4899-81f9-f922f039aca4" />
+</div>
+
+---
+## 🤖 하이퍼 파라미터 튜닝
+- Grid, Random, HyperOpt 3가지의 방법으로 F1 스코어를 최상으로 얻어내는 파라미터 탐색
+1. **탐색 결과**
+    - GridSearchCV (0.7855)
+    - RandomizedSearchCV (0.8182)
+    - HyperOpt (0.8169)
+2. **최적 파라미터의 경향성**
+    - **n_estimators (트리의 개수)**
+        - 세 방법 모두 200개 이상의 트리를 사용하는 것이 좋다고 판단
+        - RandomizedSearchCV와 HyperOpt는 450~500개 사이에 최적점 위치
+    - **learning_rate (학습률)**
+        - 0.1보다 0.16 ~ 0.19 사이의 학습률에서 높은 성능
+        - 모델이 더 과감하게 최적점을 찾을 필요가 있음
+    - **Regularization (과적합 방지)의 효과**
+        - GridSearchCV에서는 테스트하지 않았던 colsample_bytree(트리 생성 시 특성 샘플링 비율)와 subsample(데이터 샘플링 비율) 파라미터가 RandomizedSearchCV와 HyperOpt에서 중요한 역할
+
+```Python
+# 가장 높은 성능을 보인 RandomSearchCV의 파라미터 적용
+best_params = {
+    'learning_rate': 0.161,
+    'n_estimators': 489,
+    'max_depth': 8,
+    'num_leaves': 18,
+    'colsample_bytree': 0.755,
+    'subsample': 0.755,
+    'random_state': 42,
+    'class_weight': 'balanced',
+    'n_jobs': -1
+}
+```
+
+- **하이퍼 파라미터 튜닝 후 혼동 행렬**
+<div align="center">
+<img width="669" height="565" alt="image" src="https://github.com/user-attachments/assets/720ea7a5-e62f-44aa-8032-b5d7dcb09472" />
+</div>
 
 ---
 
@@ -208,12 +363,35 @@ flowchart LR
 
 - **Streamlit:**
     - 예측 확률 및 실제 이탈 여부 비교
-<img width="1168" height="809" alt="image" src="https://github.com/user-attachments/assets/4d2eb71b-299f-40b5-bf25-7c3e76efa762" />
+    <img width="1878" height="768" alt="image" src="https://github.com/user-attachments/assets/d31eca55-6b34-4524-875d-403e1b62bc30" />
+	<img width="1870" height="917" alt="image" src="https://github.com/user-attachments/assets/b7e70a0b-ebeb-4804-b7c8-75736ef1cc6f" />
+	<img width="1880" height="463" alt="image" src="https://github.com/user-attachments/assets/c1f4012d-fc55-4ec2-b55f-6b248e37585a" />
+	<img width="1889" height="953" alt="image" src="https://github.com/user-attachments/assets/5fd43521-1ea8-4b18-b295-505663ae2c61" />
 
-- **주요 인사이트:**
-    - (인사이트)
-    
 
 ---
 
 ## 💬 한 줄 회고
+
+**배상준**
+
+학습용이 아닌 실제 세상의 데이터들을 다룰 때, 데이터 불균형 상황에 어떻게 대처하고 데이터를 바라봐야 하는지 많은 생각을 하게 되는 프로젝트였습니다. 한 쪽 그룹만이 압도적인 분량으로 존재하는 데이터였기에 유의미한 패턴 차이를 포착하기가 어려웠고, 이것이 학습에 많은 영향을 미쳤습니다. 하지만 그 덕분에 모델이 다수 클래스로부터 일방적으로 영향을 받을 때 어떤 식으로 오류를 범하는지를 확인했고, 성능을 개선하는 과정에서 여러 가지 모델과 가중치를 선정하는 방법, 하이퍼 파라미터 튜닝의 상세 과정 등을 직접 몸으로 익힐 수 있었습니다.
+
+**이인재**
+    
+초기 확보한 데이터를 '실데이터'로 생각했으나, 데이터가 비정상적으로 균일하게 분포되어 있고, 노이즈의 패턴이 x, y, z로 균일한 것을 발견했고, 이전에 찾아두었던 가짜 데이터와 비교한 결과 ‘실데이터가 아닐 가능성이 높다’ 라고 생각하게 되었습니다. 그럼에도 결과를 얻기 위해 여러 가지 모델을 적용하고 비교하는 과정을 거치며, 최고의 모델을 찾기보다, 데이터의 특성에 맞춰 최적의 접근법을 찾는 것에 대한 중요성을 알게 되었으며, 데이터의 신뢰성을 다시 한번 생각하게 되었습니다.
+    
+
+**김범섭**
+    
+전체적으로 같이 작업을 하였지만 그 중 프로젝트 리드, EDA, 시연페이지 제작, 시연을 주로 담당하였다. EDA 과정중 데이터가 이탈에 상관없이 균등분포함을 확인했는데 모델 학습에도 영향을 끼쳐 정확도가 낮게 나왔다. 기본적 모델을 2개를 돌려봤는데 역시나 결과가 낮게 나와서 시간투자를 시연페이지 제작 위주로 하였는데 그동안 팀원들이 성실히 ML 과정을 다각도로 진행하는 모습을 보며 많은 자극을 받았다. 프로젝트를 복기를 하며 부족한 부분을 채울 필요가 있어 보인다.
+    
+
+**김진**
+    
+EDA와 ML의 전반적인 과정을 수행하며 데이터 분석에 대한 전체적인 흐름을 이해할 수 있었고 미니 프로젝트 때 많이 해보지 못했던 머신러닝 모델 학습과 성능 개선을 직접 시도해 볼 수 있었던 좋은 기회였다. 분석 코드 통합을 담당하며 팀원들의 코드를 정리하는 과정에서 협업 효율을 높이기 위해 코드 구조를 표준화/모듈화하고 시작했으면 좋았을 것 같다는 생각이 들었다. 데이터 불균형으로 인한 예측 편향 문제를 겪어 모델의 성능을 충분히 개선하지 못한 점이 아쉬웠지만 심한 불균형이 모델 학습에 어떤 영향을 미치는지 실험을 통해 확인할 수 있었다.
+
+
+---
+
+
