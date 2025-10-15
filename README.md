@@ -321,6 +321,45 @@ flowchart LR
 </div>
 
 ---
+## 🤖 하이퍼 파라미터 튜닝
+- Grid, Random, HyperOpt 3가지의 방법으로 F1 스코어를 최상으로 얻어내는 파라미터 탐색
+1. **탐색 결과**
+    - GridSearchCV (0.7855)
+    - RandomizedSearchCV (0.8182)
+    - HyperOpt (0.8169)
+2. **최적 파라미터의 경향성**
+    - **n_estimators (트리의 개수)**
+        - 세 방법 모두 200개 이상의 트리를 사용하는 것이 좋다고 판단
+        - RandomizedSearchCV와 HyperOpt는 450~500개 사이에 최적점 위치
+    - **learning_rate (학습률)**
+        - 0.1보다 0.16 ~ 0.19 사이의 학습률에서 높은 성능
+        - 모델이 더 과감하게 최적점을 찾을 필요가 있음
+    - **Regularization (과적합 방지)의 효과**
+        - GridSearchCV에서는 테스트하지 않았던 colsample_bytree(트리 생성 시 특성 샘플링 비율)와 subsample(데이터 샘플링 비율) 파라미터가 RandomizedSearchCV와 HyperOpt에서 중요한 역할
+
+- **하이퍼 파라미터 튜닝 후 혼동 행렬**
+
+```Python
+# 가장 높은 성능을 보인 RandomSearchCV의 파라미터 적용
+best_params = {
+    'learning_rate': 0.161,
+    'n_estimators': 489,
+    'max_depth': 8,
+    'num_leaves': 18,
+    'colsample_bytree': 0.755,
+    'subsample': 0.755,
+    'random_state': 42,
+    'class_weight': 'balanced',
+    'n_jobs': -1
+}
+```
+
+- **하이퍼 파라미터 튜닝 후 혼동 행렬**
+<div align="center">
+<img width="669" height="565" alt="image" src="https://github.com/user-attachments/assets/720ea7a5-e62f-44aa-8032-b5d7dcb09472" />
+</div>
+
+---
 
 ## 🧪 수행 결과
 
