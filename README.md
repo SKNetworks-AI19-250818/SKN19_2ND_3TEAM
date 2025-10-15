@@ -147,7 +147,6 @@ flowchart LR
     
     | 컬럼명 | 제거 클래스 | 비율 |
     | --- | --- | --- |
-    | `Device Used Most Often` | Smart_Television | 0.32% |
     | `Genre Preference` | Dramedy | 0.31% |
     | `Region` | Eurasia | 0.32% |
     | `Payment History` | Late | 0.32% |
@@ -189,19 +188,24 @@ flowchart LR
     
     | 지표 | 점수 |
     | --- | --- |
-    | 정확도 (Accuracy) |  |
-    | 정밀도 (Precision) |  |
-    | 재현율 (Recall) |  |
-    | F1 Score |  |
+    | 정확도 (Accuracy) | 67% |
+    | 정밀도 (Precision) | 96% |
+    | 재현율 (Recall) | 66% |
+    | F1 Score | 78% |
   
 - **주요 피처:**
 
     | Feature | 중요도 |
     |---------|--------|
-    | ff | <span style="color:red">★★★★☆</span> |
-    | ff | <span style="color:orange">★★★☆☆</span> |
-    | ff | <span style="color:green">★★☆☆☆</span> |
-
+    | Age Group (연령대) | <span style="color:red">★★★★★</span> |
+    | Promotional Offers Used (쿠폰 사용 횟수) | <span style="color:orange">★★★★★</span> |
+    | Support Queries Logged (총 문의 수) | <span style="color:green">★★★★☆</span> |
+    | Queries Per Month (월별 문의 수) | <span style="color:green">★★★☆☆</span> |
+    | Genre Preference (선호 장르) | <span style="color:green">★★★☆☆</span> |
+    | Subscription Length (구독 기간) | <span style="color:green">★★☆☆☆</span> |
+    | Monthly Income (월 소득) | <span style="color:green">★★☆☆☆</span> |
+    | Price_Burden_Ratio | <span style="color:green">★★☆☆☆</span> |
+    | Engagement Rate (참여도) | <span style="color:green">★★☆☆☆</span> |
 ---
 
 ## 🧪 수행 결과
