@@ -224,6 +224,9 @@ flowchart LR
 |---------|--------|
 | <img width="669" height="565" alt="image" src="https://github.com/user-attachments/assets/66e0914e-2036-4dec-8bab-bd7549585e50" /> | <img width="853" height="550" alt="image" src="https://github.com/user-attachments/assets/ab3e8b95-d38c-4f51-981d-7b5bb405c158" /> |
 
+- **임계치에 따른 성능 지표 변화**
+<img width="845" height="552" alt="image" src="https://github.com/user-attachments/assets/6323983c-ca59-400b-89ab-54e7c3bd8eba" />
+- 
 
 ---
 
