@@ -118,6 +118,8 @@ flowchart LR
 | --- | --- |
 | <img width="687" height="671" alt="image" src="https://github.com/user-attachments/assets/14ccacde-9346-4d52-9983-7993d968c05b" /> | <img width="1339" height="361" alt="image" src="https://github.com/user-attachments/assets/43664b9e-fc7a-4b04-8877-72a311077e1c" /> |
 
+---
+
 ### 2️⃣ 결측치 및 이상치 탐색
 
 - **Customer ID (고객번호)**
@@ -132,6 +134,9 @@ flowchart LR
     - 허용 값 외 항목 → 유사 값 치환 처리 필요
 - **극소수 데이터**
     - Device, Genre, Region, Payment 등 0.3% 수준 → 제거 또는 통합 처리 필요
+ 
+---
+
 
 ### 3️⃣ 데이터 시각화를 통한 탐색
 
@@ -142,6 +147,8 @@ flowchart LR
 <img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/76a274b1-825b-4453-ad28-802ab93b7188" />
 
 </div>
+
+---
 
 ### 4️⃣ 데이터 정제 및 전처리
 
@@ -171,6 +178,8 @@ flowchart LR
     | `Genre Preference` | Dramedy | 0.31% |
     | `Region` | Eurasia | 0.32% |
     | `Payment History` | Late | 0.32% |
+   
+---
 
 ### 5️⃣ 피처 엔지니어링
 
@@ -192,12 +201,14 @@ flowchart LR
 	| `Satisfaction_per_Dollar` | 요금당 만족도                  | `Customer Satisfaction Score (1-10)`, `User_Subscription_Price` |
 	| `Queries_per_Month`       | 월 평균 고객 문의 수             | `Support Queries Logged`, `Subscription Length (Months)`        |
 
-  
+
+---
+
 
 ### ⚙️ 최종 컬럼 및 시각화
 
-(최종 컬럼)
 
+### 상관계수 히트맵
 <img width="1273" height="1048" alt="image" src="https://github.com/user-attachments/assets/16f566a9-ffba-4c08-b54c-23bf6d417ad7" />
 
 ```markdown
@@ -209,13 +220,18 @@ flowchart LR
 
 4. 시청 시간대(Time_group)과 1달러당 시청시간(Watch_Time_per_Dollar): (0.72)시청 시간 대비 가성비 낮은 사용자 이탈률 높음
 ```
+
+### 가격 대비 부담률(Price_Burden_Ratio)과 소득(Income_group)
 <div align="center">
 <img width="712" height="555" alt="image" src="https://github.com/user-attachments/assets/1e352b3d-e342-4407-b2e6-0277c9516409" />
 </div>
 
+---
+
+### 고객 특성별 이탈/잔류 수 분포
 <img width="1783" height="2484" alt="image" src="https://github.com/user-attachments/assets/2edc199f-0b22-4f80-92b2-a8b3777eb17b" />
 
-
+### 고객 특성별 이탈률 비교
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/c5cb9c16-519a-41c4-9cea-a3488d8b3eb3" width="300"></td>
@@ -232,6 +248,9 @@ flowchart LR
 2. 연령대(Age_group): 젊은층일수록 이탈율이 높음
 ```
 
+---
+
+### 고객 속성 조합별 이탈률 분석
 <img width="1740" height="1383" alt="image" src="https://github.com/user-attachments/assets/a728bc5d-2cf6-4f56-a152-394396363694" />
 
 ```markdown
